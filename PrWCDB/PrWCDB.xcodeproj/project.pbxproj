@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		703F6C2020C31BB821468F90 /* Pods_PrWCDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECED487C5826F99A587B68D /* Pods_PrWCDB.framework */; };
+		84DAFF0727B35B770084FB89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAFF0627B35B770084FB89 /* AppDelegate.swift */; };
+		84DAFF1027B35B790084FB89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DAFF0F27B35B790084FB89 /* Assets.xcassets */; };
+		84DAFF1327B35B790084FB89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DAFF1127B35B790084FB89 /* LaunchScreen.storyboard */; };
+		84DAFF1B27B365710084FB89 /* PrWCDBBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAFF1A27B365710084FB89 /* PrWCDBBaseManager.swift */; };
+		84DAFF1F27B36E240084FB89 /* PrDbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAFF1E27B36E240084FB89 /* PrDbModel.swift */; };
+		84DAFF2827B39D070084FB89 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAFF2627B39D070084FB89 /* ListTableViewController.swift */; };
+		84DAFF2927B39D070084FB89 /* ListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DAFF2727B39D070084FB89 /* ListTableViewController.xib */; };
+		84DAFF2C27B39D720084FB89 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAFF2A27B39D720084FB89 /* ListTableViewCell.swift */; };
+		84DAFF2D27B39D720084FB89 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DAFF2B27B39D720084FB89 /* ListTableViewCell.xib */; };
+		84DAFF3127B3A4AB0084FB89 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAFF3027B3A4AB0084FB89 /* InputView.swift */; };
+		84DAFF3327B3A4B60084FB89 /* InputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DAFF3227B3A4B60084FB89 /* InputView.xib */; };
+		84DAFF3527B3A7BA0084FB89 /* PrPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAFF3427B3A7B90084FB89 /* PrPopView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		84DAFF0327B35B770084FB89 /* PrWCDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrWCDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84DAFF0627B35B770084FB89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84DAFF0F27B35B790084FB89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84DAFF1227B35B790084FB89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84DAFF1427B35B790084FB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84DAFF1A27B365710084FB89 /* PrWCDBBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrWCDBBaseManager.swift; sourceTree = "<group>"; };
+		84DAFF1E27B36E240084FB89 /* PrDbModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrDbModel.swift; sourceTree = "<group>"; };
+		84DAFF2627B39D070084FB89 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		84DAFF2727B39D070084FB89 /* ListTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewController.xib; sourceTree = "<group>"; };
+		84DAFF2A27B39D720084FB89 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		84DAFF2B27B39D720084FB89 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		84DAFF3027B3A4AB0084FB89 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		84DAFF3227B3A4B60084FB89 /* InputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputView.xib; sourceTree = "<group>"; };
+		84DAFF3427B3A7B90084FB89 /* PrPopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrPopView.swift; sourceTree = "<group>"; };
+		8ECED487C5826F99A587B68D /* Pods_PrWCDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrWCDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F43D79B7F702F5CA5B6B5AA /* Pods-PrWCDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrWCDB.debug.xcconfig"; path = "Target Support Files/Pods-PrWCDB/Pods-PrWCDB.debug.xcconfig"; sourceTree = "<group>"; };
+		D654FF4804230084E4F7E44F /* Pods-PrWCDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrWCDB.release.xcconfig"; path = "Target Support Files/Pods-PrWCDB/Pods-PrWCDB.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84DAFF0027B35B770084FB89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				703F6C2020C31BB821468F90 /* Pods_PrWCDB.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84DAFEFA27B35B770084FB89 = {
+			isa = PBXGroup;
+			children = (
+				84DAFF0527B35B770084FB89 /* PrWCDB */,
+				84DAFF0427B35B770084FB89 /* Products */,
+				D93DD06CCCC55F5F24FD6DEB /* Pods */,
+				EA466383F46E3ED8938D23DC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84DAFF0427B35B770084FB89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84DAFF0327B35B770084FB89 /* PrWCDB.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84DAFF0527B35B770084FB89 /* PrWCDB */ = {
+			isa = PBXGroup;
+			children = (
+				84DAFF0627B35B770084FB89 /* AppDelegate.swift */,
+				84DAFF2627B39D070084FB89 /* ListTableViewController.swift */,
+				84DAFF2727B39D070084FB89 /* ListTableViewController.xib */,
+				84DAFF2A27B39D720084FB89 /* ListTableViewCell.swift */,
+				84DAFF2B27B39D720084FB89 /* ListTableViewCell.xib */,
+				84DAFF3027B3A4AB0084FB89 /* InputView.swift */,
+				84DAFF3227B3A4B60084FB89 /* InputView.xib */,
+				84DAFF3427B3A7B90084FB89 /* PrPopView.swift */,
+				84DAFF1C27B36DD40084FB89 /* PrDB */,
+				84DAFF0F27B35B790084FB89 /* Assets.xcassets */,
+				84DAFF1127B35B790084FB89 /* LaunchScreen.storyboard */,
+				84DAFF1427B35B790084FB89 /* Info.plist */,
+			);
+			path = PrWCDB;
+			sourceTree = "<group>";
+		};
+		84DAFF1C27B36DD40084FB89 /* PrDB */ = {
+			isa = PBXGroup;
+			children = (
+				84DAFF1E27B36E240084FB89 /* PrDbModel.swift */,
+				84DAFF1A27B365710084FB89 /* PrWCDBBaseManager.swift */,
+			);
+			path = PrDB;
+			sourceTree = "<group>";
+		};
+		D93DD06CCCC55F5F24FD6DEB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F43D79B7F702F5CA5B6B5AA /* Pods-PrWCDB.debug.xcconfig */,
+				D654FF4804230084E4F7E44F /* Pods-PrWCDB.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EA466383F46E3ED8938D23DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8ECED487C5826F99A587B68D /* Pods_PrWCDB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84DAFF0227B35B770084FB89 /* PrWCDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84DAFF1727B35B790084FB89 /* Build configuration list for PBXNativeTarget "PrWCDB" */;
+			buildPhases = (
+				45000CADF4C2E62A212BCA63 /* [CP] Check Pods Manifest.lock */,
+				84DAFEFF27B35B770084FB89 /* Sources */,
+				84DAFF0027B35B770084FB89 /* Frameworks */,
+				84DAFF0127B35B770084FB89 /* Resources */,
+				A9FB06A1495D05718106FD91 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrWCDB;
+			productName = PrWCDB;
+			productReference = 84DAFF0327B35B770084FB89 /* PrWCDB.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84DAFEFB27B35B770084FB89 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					84DAFF0227B35B770084FB89 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 84DAFEFE27B35B770084FB89 /* Build configuration list for PBXProject "PrWCDB" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84DAFEFA27B35B770084FB89;
+			productRefGroup = 84DAFF0427B35B770084FB89 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84DAFF0227B35B770084FB89 /* PrWCDB */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84DAFF0127B35B770084FB89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DAFF1327B35B790084FB89 /* LaunchScreen.storyboard in Resources */,
+				84DAFF2D27B39D720084FB89 /* ListTableViewCell.xib in Resources */,
+				84DAFF1027B35B790084FB89 /* Assets.xcassets in Resources */,
+				84DAFF2927B39D070084FB89 /* ListTableViewController.xib in Resources */,
+				84DAFF3327B3A4B60084FB89 /* InputView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45000CADF4C2E62A212BCA63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrWCDB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9FB06A1495D05718106FD91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrWCDB/Pods-PrWCDB-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrWCDB/Pods-PrWCDB-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrWCDB/Pods-PrWCDB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84DAFEFF27B35B770084FB89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DAFF1B27B365710084FB89 /* PrWCDBBaseManager.swift in Sources */,
+				84DAFF3127B3A4AB0084FB89 /* InputView.swift in Sources */,
+				84DAFF1F27B36E240084FB89 /* PrDbModel.swift in Sources */,
+				84DAFF0727B35B770084FB89 /* AppDelegate.swift in Sources */,
+				84DAFF2827B39D070084FB89 /* ListTableViewController.swift in Sources */,
+				84DAFF2C27B39D720084FB89 /* ListTableViewCell.swift in Sources */,
+				84DAFF3527B3A7BA0084FB89 /* PrPopView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		84DAFF1127B35B790084FB89 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84DAFF1227B35B790084FB89 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84DAFF1527B35B790084FB89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84DAFF1627B35B790084FB89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84DAFF1827B35B790084FB89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F43D79B7F702F5CA5B6B5AA /* Pods-PrWCDB.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F2H8N795BB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PrWCDB/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cd.Hperry.PrWCDB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84DAFF1927B35B790084FB89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D654FF4804230084E4F7E44F /* Pods-PrWCDB.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F2H8N795BB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PrWCDB/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cd.Hperry.PrWCDB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84DAFEFE27B35B770084FB89 /* Build configuration list for PBXProject "PrWCDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DAFF1527B35B790084FB89 /* Debug */,
+				84DAFF1627B35B790084FB89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84DAFF1727B35B790084FB89 /* Build configuration list for PBXNativeTarget "PrWCDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DAFF1827B35B790084FB89 /* Debug */,
+				84DAFF1927B35B790084FB89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84DAFEFB27B35B770084FB89 /* Project object */;
+}

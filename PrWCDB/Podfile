@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git' #官方仓库地址
+
+platform :ios, '12.0'
+
+target 'PrWCDB' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+pod 'WCDB.swift' #本地数据库缓存
+
+
+end
