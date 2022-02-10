@@ -13,7 +13,7 @@ import WCDBSwift
 class ListTableViewController: UITableViewController {
     
     private var users : [UserModel] = [UserModel]()
-    
+    private var searchC : UISearchController!
     private lazy var addButton  : UIButton = {
         let bt = UIButton()
         bt.setTitle("添加", for: .normal)
@@ -34,19 +34,46 @@ class ListTableViewController: UITableViewController {
     }
 
     private func configUI(){
+        
+        navigationItem.title = "PRWCDB"
+        
         view.addSubview(addButton)
-        addButton.frame = CGRect(x: UIScreen.main.bounds.width - 80, y: UIScreen.main.bounds.height - 150, width: 50, height: 50)
+        addButton.frame = CGRect(x: UIScreen.main.bounds.width - 80, y: UIScreen.main.bounds.height - 250, width: 50, height: 50)
         
         self.tableView.register(UINib(nibName: "ListTableViewCell",bundle: nil), forCellReuseIdentifier: "ListTableViewCell")
         
         let foot = UILabel()
         foot.text = "左滑删除，选中更改"
-        foot.textColor = .black
+        foot.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
         foot.textAlignment = .center
         foot.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         foot.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 60)
         tableView.tableFooterView = foot
         
+        initSearchController()
+    }
+    /// 初始化搜索控制器
+    func initSearchController() {
+        searchC = UISearchController.init(searchResultsController: nil)
+        searchC.searchResultsUpdater = self
+        //设置placeholder
+        searchC.searchBar.delegate = self
+        searchC.searchBar.placeholder = "搜索:请输入uid"
+        if #available(iOS 13.0, *) {
+            searchC.searchBar.searchTextField.font = UIFont.systemFont(ofSize: 13)
+        }
+        //设置为false，则搜索出来的内容可点击等操作
+        searchC.obscuresBackgroundDuringPresentation = false
+        if #available(iOS 11.0, *) {
+            //总是显示搜索框,如果不设置，会随着滚动而消失
+            navigationItem.hidesSearchBarWhenScrolling = false
+            //将搜索控制器加到导航栏上
+            navigationItem.searchController = searchC
+        } else {
+            tableView.tableHeaderView = searchC.searchBar
+
+        }
+
 
     }
     ///从数据库获取数据源
@@ -62,6 +89,15 @@ class ListTableViewController: UITableViewController {
         let query = UserModel.Properties.uid == uid
 
         PrWCDBBaseManager.shared.deleteFromDb(fromTable: userModelTableName, where: query)
+    }
+    //搜索
+    func dbSearch(uid:String){
+        ///UserModel.Properties.uid.like("\(uid)%") 查询uid 是否包含输入的uid
+        if let users1 = PrWCDBBaseManager.shared.qureyFromDb(fromTable: userModelTableName, cls: UserModel.self,where: UserModel.Properties.uid.like("\(uid)%")){
+            users.removeAll()
+            users.append(contentsOf: users1)
+            tableView.reloadData()
+        }
     }
     
     
@@ -176,4 +212,19 @@ class ListTableViewController: UITableViewController {
     }
     */
     
+}
+
+extension ListTableViewController:UISearchBarDelegate,UISearchResultsUpdating{
+
+    /// UISearchController代理，实时进行搜索
+    func updateSearchResults(for searchController: UISearchController) {
+        if let text = searchC.searchBar.text, text.count > 0 {
+            dbSearch(uid: text)
+        }
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
+        getDbModels()
+    }
+
 }

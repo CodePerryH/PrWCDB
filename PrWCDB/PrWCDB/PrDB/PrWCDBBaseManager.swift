@@ -62,7 +62,8 @@ class PrWCDBBaseManager : NSObject{
         }
     }
     
-    ///修改
+    
+    /// 修改 propertys 属性 object对象 condition条件 
     func updateToDb<T : TableEncodable>(table: String, on propertys:[PropertyConvertible],with object:T,where condition: Condition? = nil){
         do {
             try dataBase?.update(table: table, on: propertys, with: object, where: condition)
@@ -73,7 +74,7 @@ class PrWCDBBaseManager : NSObject{
     }
 
     
-    /// 删除操作
+    /// 删除操作,按条件删除
     /// - Parameters:
     ///   - fromTable: 表
     ///   - condition: 条件
@@ -84,7 +85,24 @@ class PrWCDBBaseManager : NSObject{
             debugPrint("delete error \(error.localizedDescription)")
         }
     }
-    ///查询
+    
+
+    
+    /// 查询表数据
+    /// - Returns: 【T】
+    /// WINQ的接口包括但不限于：
+    /*
+    一元操作符：+、-、!等
+
+    二元操作符：||、&&、+、-、*、/、|、&、<<、>>、<、<=、==、!=、>、>=等
+
+    范围比较：IN、BETWEEN等
+
+    字符串匹配：LIKE、GLOB、MATCH、REGEXP等
+
+    聚合函数：AVG、COUNT、MAX、MIN、SUM等
+
+    */
     func qureyFromDb<T: TableDecodable>(fromTable: String, cls cName: T.Type, where condition: Condition? = nil, orderBy orderList:[OrderBy]? = nil) -> [T]? {
         do {
             let allObjects: [T] = try (dataBase?.getObjects(fromTable: fromTable, where:condition, orderBy:orderList))!
@@ -95,6 +113,7 @@ class PrWCDBBaseManager : NSObject{
         }
         return nil
     }
+
     ///删除数据表
     func dropTable(table : String) {
         do {

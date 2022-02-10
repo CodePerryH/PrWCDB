@@ -11,7 +11,7 @@ import WCDBSwift
 //类型绑定
 let userModelTableName  = "UserModel"
 class UserModel: TableCodable {
-    /// 主键自增id zhi
+    /// 主键自增id 
     var identifier: Int? = nil
 
     var uid: String = ""

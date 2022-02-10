@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         createWcdbTable()
         
-        window?.rootViewController  = ListTableViewController()
+        let nav : UINavigationController = UINavigationController(rootViewController: ListTableViewController())
+        window?.rootViewController  = nav
 
         window?.makeKeyAndVisible()
         return true
